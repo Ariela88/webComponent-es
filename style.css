@@ -1,0 +1,16 @@
+body{
+    display: grid;
+    grid-column-start:auto;
+
+}
+super-header{
+
+    position: sticky;
+   
+   
+}
+
+super-sidebar{
+    margin-top: 200px;
+}
+
