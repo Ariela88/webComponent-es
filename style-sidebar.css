@@ -7,7 +7,7 @@ body{
 font-family: "Lato";
 font-size: 100%; 
 overflow-y: scroll; 
-font-family: sans-serif; 
+
 -ms-text-size-adjust: 100%; 
 -webkit-text-size-adjust: 100%; 
 -ms-text-size-adjust: 100%;
@@ -25,21 +25,22 @@ text-decoration: none;
 @include transition(all 0.6s ease);
 }
 
-.app{
-height: 100vh;
-}
+
 
 .sidebar {
+  border-top: 0.5px solid gray;
+  border-right: 0.5px solid gray;
 position: absolute;
 width: 33.3333%;
 width: 20%;
 height: 100%;
-top: 130px;
+top: 110px;
 overflow:hidden;
 background-color: #ffffff;
 -webkit-transform: translateZ(0);
 visibility: visible;
 -webkit-backface-visibility: hidden;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
 
 header {
@@ -72,6 +73,7 @@ padding: 0;
 margin: 0;}
 
 li{
+  
 margin-left: 0;
 padding-left: 0;
 min-width: 13em;
@@ -104,7 +106,7 @@ vertical-align:middle;
 
 & > ul > li > a:after {
 content: '\f125';
-font-family: ionicons;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 font-size: 0.5em;
 width: 10px;
 color: #fff;

@@ -24,33 +24,51 @@ class PostCardComponent extends HTMLElement{
             this.shadowRoot.innerHTML = `
             <style>
             .card{
+                width:400px;
+                position:relative;
+                float:right;
                 display: flex;
+                width: 70%;
                 flex-direction: column;
                 background-color: white;
                 border-radius: 16px;
                 padding: 16px;
                 margin-bottom: 4px;
+                
+               
+            }
+            .card img{
+                width:60%;
+                border-radius:20px;
             }
             .card-title{
-                font-size: x-large;
+                width:100%;
+                flex-wrap:wrap;
+                font-size: 20px;
                 font-weight: bold;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
             .card-author{
                 font-size: large;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
             .card-details{
                 display: flex;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
-            .card-detail{
+            .card-details{
                 flex:1;
+                display:flex;
+                flex-direction:column;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
             </style>
             `;
 
             this.shadowRoot.innerHTML += `
             <div class="card">
+            <span class="card-author">${this.post.data.author_fullname}</span>
                 <span class="card-title">${this.post.data.title}</span>
-                <span class="card-author">${this.post.data.author_fullname}</span>
                 <img src="${this.post.data.thumbnail}" alt="">
                 <div class="card-details">
                     <span class="card-detail">${this.post.data.created}</span>

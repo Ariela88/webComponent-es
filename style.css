@@ -1,16 +1,27 @@
-body{
+body {
     display: grid;
-    grid-column-start:auto;
+    grid-column-start: auto;
 
 }
-super-header{
 
+super-header {
+    background-color: white;
+  
+   
+
+}
+
+super-sidebar {
+  
+   
+   
+  
+}
+
+post-list {
     position: sticky;
+    top: 150px;
    
    
-}
 
-super-sidebar{
-    margin-top: 200px;
 }
-

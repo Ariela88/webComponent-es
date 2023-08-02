@@ -15,13 +15,7 @@ class SuperFooterComponent extends HTMLElement{ // definisce che questa classe s
 
     render(){
 
-        this.shadowRoot.innerHTML = `
-        <style> 
-        
-        
-        </style> 
-        
-        <p> ©Copyright Plattform 2023  </p>`
+        this.shadowRoot.innerHTML = ``
 
     }
     }

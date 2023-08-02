@@ -26,11 +26,13 @@ class SuperHeaderComponent extends HTMLElement { // definisce che questa classe 
 
        
         .header{
+            
             display: flex;
             justify-content: space-around;
             align-items: center;
             margin:0;
             padding:0;
+           
         }
 
         .btn-header {
@@ -43,11 +45,12 @@ class SuperHeaderComponent extends HTMLElement { // definisce che questa classe 
         
         .btn-header button {
         
-            width: 80px;
-            height: 50px;
+            width: 100px;
+            height: 40px;
             border-radius: 26px;
             box-shadow: none;
             border: none;
+            font-weight: 500;
             
         }
         
