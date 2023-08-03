@@ -64,10 +64,10 @@ class PostCardComponent extends HTMLElement {
 
             const cardDetailsDiv = document.createElement('div');
             cardDetailsDiv.classList.add('card-details');
-            div.appendChild(cardDetailsDiv);
+           
 
-            const timestampInMillis = this.post.data.created;
-            const oreFormattate = msToTime(timestampInMillis);
+            const timestamp = this.post.data.created;
+            const oreFormattate = toHumanTime(timestamp);
             const timestampDisplayElement = document.createElement('span');
             timestampDisplayElement.classList.add('card-detail');
             timestampDisplayElement.textContent = oreFormattate;
@@ -96,7 +96,10 @@ class PostCardComponent extends HTMLElement {
             link.rel = 'noopener noreferrer';
             link.textContent = 'link al post originale';
             cardDetailsDiv.appendChild(link);
+             div.appendChild(cardDetailsDiv);
 
+
+           
             // const deleteBtn = document.createElement('button');
             // deleteBtn.textContent = 'cancellami';
             // div.appendChild(deleteBtn);
@@ -110,10 +113,31 @@ class PostCardComponent extends HTMLElement {
     }
 }
 
-function msToTime(msDurata) {
-    let ore = parseInt((msDurata / (1000 * 60 * 60)) % 24);
-    ore = (ore < 10) ? "0" + ore : ore;
-    return ore  + 'ore fa';
+function toHumanTime(timestamp) {
+   
+
+    const timestampInMils = timestamp * 1000
+    const now = Date.now()
+
+    const delta = now - timestampInMils
+
+    let second = parseInt(delta / 1000)
+    if(second < 60){
+        return second + ' secondi fa'
+    }
+    
+    let minuti = parseInt(second / 60)
+    if(minuti < 60){
+        return minuti + ' minuti fa'
+    }
+
+    let ore = parseInt((minuti / 60));
+    if(ore < 24){
+        return ore + ' ore fa'
+    } 
+   
+    return parseInt(ore / 24) + ' giorni fa'
+   
 }
 
 customElements.define('post-card', PostCardComponent);
