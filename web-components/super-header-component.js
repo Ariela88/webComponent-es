@@ -64,6 +64,7 @@ class SuperHeaderComponent extends HTMLElement { // definisce che questa classe 
         }
         #logo-reddit{
             width:10%;
+            margin-right:112px;
         }
         #download-app-btn {
             background-color: rgb(174, 172, 172);

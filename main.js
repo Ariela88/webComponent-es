@@ -26,6 +26,11 @@ function changeTitleColor(){
     }
 }
 
+
+
+
+
+
 // creare una pagina web che permetta di visualizzare
 // gli ultimi 25 post del subreddit /aww (https://www.reddit.com/r/aww/new.json)
 // usare i web component
